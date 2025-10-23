@@ -26,25 +26,19 @@ export default function ProfileScreen() {
       </View>
 
       <View style={styles.section}>
-        <TouchableOpacity style={styles.menuItem}>
-          <View style={styles.menuIconContainer}>
-            <Bell size={24} color="#4A90E2" />
-          </View>
-          <Text style={styles.menuText}>Notifications</Text>
-        </TouchableOpacity>
 
         <TouchableOpacity style={styles.menuItem}>
           <View style={styles.menuIconContainer}>
-            <Settings size={24} color="#4A90E2" />
+            <Settings size={24} color="#7a7a7aff" />
           </View>
           <Text style={styles.menuText}>Settings</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.menuItem} onPress={handleSignOut}>
           <View style={styles.menuIconContainer}>
-            <LogOut size={24} color="#E74C3C" />
+            <LogOut size={24} color="#7a7a7aff" />
           </View>
-          <Text style={[styles.menuText, styles.signOutText]}>Sign Out</Text>
+          <Text style={[styles.menuText, styles.signOutText]}>Dil nga llogaria</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -57,7 +51,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   header: {
-    backgroundColor: '#4A90E2',
+    backgroundColor: '#c62829',
     paddingTop: 60,
     paddingBottom: 30,
     alignItems: 'center',
@@ -105,6 +99,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   signOutText: {
-    color: '#E74C3C',
+    color: '#000000ff',
   },
 });
