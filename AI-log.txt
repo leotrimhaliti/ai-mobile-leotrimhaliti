@@ -1,0 +1,5 @@
+1. Tell me the command to make a react native and expo go project (typescript)
+2. Make me an app that tracks buses in real time
+3. How do i make the static lines where the bus has to go(fixed route)
+4. How do i connect to expo if im not in the same network
+5. Where can i find the google maps API key
