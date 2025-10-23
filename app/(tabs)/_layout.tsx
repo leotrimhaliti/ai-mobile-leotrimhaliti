@@ -6,7 +6,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#4A90E2',
+        tabBarActiveTintColor: '#c62829',
         tabBarInactiveTintColor: '#999',
         tabBarStyle: {
           borderTopWidth: 1,
@@ -16,7 +16,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Track Bus',
+          title: 'Vendodhja e autobusave',
           tabBarIcon: ({ size, color }) => (
             <MapPin size={size} color={color} />
           ),
@@ -25,7 +25,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: 'Profile',
+          title: 'Profili',
           tabBarIcon: ({ size, color }) => (
             <User size={size} color={color} />
           ),

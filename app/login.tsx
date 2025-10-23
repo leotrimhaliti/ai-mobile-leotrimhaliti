@@ -8,9 +8,11 @@ import {
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
+  Image,
 } from 'react-native';
 import { router } from 'expo-router';
 import { useAuth } from '@/contexts/AuthContext';
+import logo from '@/assets/images/logobus.png'; // ← sigurohu që ekziston kjo rrugë
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
@@ -42,12 +44,13 @@ export default function LoginScreen() {
       style={styles.container}
     >
       <View style={styles.content}>
-        <Text style={styles.title}>School{'\n'}Bus Tracking</Text>
-
         <View style={styles.formContainer}>
+          {/* LOGO NALT */}
+          <Image source={logo} style={styles.logo} resizeMode="contain" />
+
           <TextInput
             style={styles.input}
-            placeholder="User name/ Email"
+            placeholder="Përdoruesi"
             placeholderTextColor="#999"
             value={email}
             onChangeText={setEmail}
@@ -57,7 +60,7 @@ export default function LoginScreen() {
 
           <TextInput
             style={styles.input}
-            placeholder="Password"
+            placeholder="Fjalëkalimi"
             placeholderTextColor="#999"
             value={password}
             onChangeText={setPassword}
@@ -74,12 +77,12 @@ export default function LoginScreen() {
             {loading ? (
               <ActivityIndicator color="#fff" />
             ) : (
-              <Text style={styles.loginButtonText}>Login</Text>
+              <Text style={styles.loginButtonText}>Kyçu</Text>
             )}
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => {}}>
-            <Text style={styles.forgotPassword}>forgot password?</Text>
+            <Text style={styles.forgotPassword}>Keni harruar fjalëkalimin?! Klikoni këtu</Text>
           </TouchableOpacity>
         </View>
 
@@ -104,7 +107,7 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
   },
   title: {
-    fontSize: 32,
+    fontSize: 20,
     fontWeight: '300',
     color: '#000',
     lineHeight: 40,
@@ -113,8 +116,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     marginTop: -80,
+    alignItems: 'center',
+  },
+  logo: {
+    width: 200,
+    height: 200,
+    marginBottom: 20,
   },
   input: {
+    width: '100%',
     height: 50,
     borderWidth: 1,
     borderColor: '#ddd',
@@ -126,11 +136,12 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     height: 50,
-    backgroundColor: '#8B8B8B',
+    backgroundColor: '#c62829',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 8,
+    width: '100%',
   },
   loginButtonText: {
     color: '#fff',
@@ -146,7 +157,7 @@ const styles = StyleSheet.create({
   signUpText: {
     textAlign: 'center',
     fontSize: 16,
-    color: '#000',
+    color: '#a8a8a8ff',
     fontWeight: '500',
   },
   errorText: {
